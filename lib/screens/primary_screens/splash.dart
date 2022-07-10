@@ -14,6 +14,7 @@ class Splash extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Stack(
+              alignment: AlignmentDirectional.center,
               children: [
                 Container(
                   width: 100,
@@ -22,7 +23,9 @@ class Splash extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(24)),
                 ),
-                Image.asset("assets/images/logo.jpg"),
+                Container(
+                  child: Image.asset("assets/images/logo.png"),
+                ),
               ],
             ),
             RichText(
