@@ -13,7 +13,18 @@ class Splash extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/images/logo.jpg"),
+            Stack(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24)),
+                ),
+                Image.asset("assets/images/logo.jpg"),
+              ],
+            ),
             RichText(
               text: TextSpan(
                 children: <TextSpan>[
