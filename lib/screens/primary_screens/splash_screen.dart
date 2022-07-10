@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_hub/shared/styles/colors.dart';
 import 'package:food_hub/shared/styles/texts.dart';
 
-class Splash extends StatelessWidget {
-  const Splash({Key? key}) : super(key: key);
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

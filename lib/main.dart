@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_hub/screens/primary_screens/Splash.dart';
+import 'package:food_hub/screens/primary_screens/splash_screen.dart';
+import 'package:food_hub/screens/primary_screens/welcome_screen.dart';
 import 'package:food_hub/shared/styles/colors.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Splash(),
+      home: WelcomeScreen(),
     );
   }
 }

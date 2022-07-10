@@ -55,7 +55,9 @@ flutter:
     - family: Phosphate
       fonts:
         - asset: assets/fonts/Phosphate.otf
-
+    - family: Jost
+      fonts:
+        - asset: assets/fonts/Jost.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
