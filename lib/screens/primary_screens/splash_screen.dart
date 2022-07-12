@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub/shared/styles/colors.dart';
-import 'package:food_hub/shared/styles/texts.dart';
+import 'package:food_hub/shared/styles/texts_styles.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);

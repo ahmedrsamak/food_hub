@@ -1,9 +1,15 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:food_hub/screens/primary_screens/splash_screen.dart';
 import 'package:food_hub/screens/primary_screens/welcome_screen.dart';
 import 'package:food_hub/shared/styles/colors.dart';
 
+var physicalScreenSize = window.physicalSize;
+var physicalWidth = physicalScreenSize.width;
+var physicalHeight = physicalScreenSize.height;
 void main() {
+  print("width: $physicalWidth\nheight: $physicalHeight");
   runApp(const MyApp());
 }
 
