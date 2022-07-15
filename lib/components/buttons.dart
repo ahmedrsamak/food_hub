@@ -76,4 +76,25 @@ class CustomButtons {
           ),
         ),
       );
+  static Widget CirculIconButton(
+          {Color? iconColor,
+          Color? splashColor,
+          required Function()? onTap,
+          double width = 20,
+          double height = 20,
+          required Icon icon}) =>
+      ClipOval(
+        child: Material(
+          color: iconColor,
+          child: InkWell(
+            splashColor: splashColor,
+            onTap: onTap,
+            child: SizedBox(
+              width: width,
+              height: height,
+              child: icon,
+            ),
+          ),
+        ),
+      );
 }

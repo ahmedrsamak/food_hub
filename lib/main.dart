@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:food_hub/screens/primary_screens/onboarding_Screen.dart';
 import 'package:food_hub/screens/primary_screens/splash_screen.dart';
 import 'package:food_hub/screens/primary_screens/welcome_screen.dart';
 import 'package:food_hub/shared/styles/colors.dart';
@@ -9,7 +10,7 @@ var physicalScreenSize = window.physicalSize;
 var physicalWidth = physicalScreenSize.width;
 var physicalHeight = physicalScreenSize.height;
 void main() {
-  print("width: $physicalWidth\nheight: $physicalHeight");
+  print("width: $physicalWidth\nhieght: $physicalHeight ");
   runApp(const MyApp());
 }
 
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: WelcomeScreen(),
+      home: SafeArea(
+        child: OnboardingScreens(),
+      ),
     );
   }
 }

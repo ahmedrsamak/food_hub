@@ -10,4 +10,6 @@ class FoodHubColors {
   static Color secondaryBorder = Color(0xffFFC529);
   static Color white = Color(0xFFFFFFFF);
   static Color textBlack = Color(0xFF111719);
+  static Color shadowColor = Colors.grey;
+  static Color iconColor = Colors.white;
 }
