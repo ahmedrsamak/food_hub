@@ -15,8 +15,6 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       // Create Container top act like background image and include widgets inside it
       body: Container(
-        width: physicalWidth,
-        height: physicalHeight,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -36,7 +34,7 @@ class WelcomeScreen extends StatelessWidget {
               // Skip Button below Wrapped by Padding
               Align(
                 alignment: Alignment.topRight,
-                child: CustomButtons.textOnlyButton(
+                child: FoodHubCustomButtons.textOnlyButton(
                     width: 55,
                     height: 32,
                     buttonColor: FoodHubColors.white,
@@ -82,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               Spacer(flex: 10),
-              CustomWidgets.customDividerWithCenterText(
+              FoodHubCustomWidgets.customDividerWithCenterText(
                 text: "sign in with",
                 textStyle: FoodHubTextStyles.defualtTextStyle(
                     color: FoodHubColors.white, fontWeight: FontWeight.w500),
@@ -92,7 +90,7 @@ class WelcomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomButtons.textLogoButton(
+                  FoodHubCustomButtons.textLogoButton(
                     textStyle: FoodHubTextStyles.defualtTextStyle(),
                     text: "Facebook",
                     onTap:
@@ -103,8 +101,8 @@ class WelcomeScreen extends StatelessWidget {
                     width: 140,
                     height: 54,
                   ),
-                  Spacer(),
-                  CustomButtons.textLogoButton(
+                  SizedBox(width: 15),
+                  FoodHubCustomButtons.textLogoButton(
                     text: "Google",
                     onTap:
                         () {}, // TODO add on Tap google Function in welcome screen
@@ -118,8 +116,8 @@ class WelcomeScreen extends StatelessWidget {
                 ],
               ),
               Spacer(flex: 2),
-              CustomButtons.textOnlyButton(
-                width: double.infinity,
+              FoodHubCustomButtons.textOnlyButton(
+                width: 295,
                 height: 54,
                 textStyle: FoodHubTextStyles.defualtTextStyle(
                   color: FoodHubColors.white,

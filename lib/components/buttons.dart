@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub/shared/styles/texts_styles.dart';
 
-class CustomButtons {
+class FoodHubCustomButtons {
   static Widget textOnlyButton({
     double width = 30,
     double height = 20,

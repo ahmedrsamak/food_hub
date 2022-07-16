@@ -5,7 +5,6 @@ import 'package:food_hub/components/custom_shadow.dart';
 import 'package:food_hub/main.dart';
 import 'package:food_hub/shared/styles/colors.dart';
 import 'package:food_hub/shared/styles/texts_styles.dart';
-import 'package:simple_shadow/simple_shadow.dart';
 
 class OnboardingScreens extends StatelessWidget {
   static double screenNum = 1;
@@ -30,11 +29,10 @@ class OnboardingScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(35),
-        child: Container(
-          width: physicalWidth,
-          height: physicalHeight,
+      body: Align(
+        alignment: Alignment.center,
+        child: Padding(
+          padding: EdgeInsets.all(35),
           child: OnboardingScreens.onboarding(
             dotsCount: 3,
             position: screenNum,
@@ -70,8 +68,8 @@ class OnboardingScreens extends StatelessWidget {
             dotsCount: 3,
             position: position - 1,
             decorator: DotsDecorator(
-              color: FoodHubColors.secondaryBorder,
-              activeColor: FoodHubColors.secondaryBorder,
+              color: FoodHubColors.secondaryColor,
+              activeColor: FoodHubColors.secondaryColor,
               size: Size.square(5),
               activeSize: Size(25, 5),
               spacing: EdgeInsets.symmetric(horizontal: 6),
@@ -100,7 +98,7 @@ class OnboardingScreens extends StatelessWidget {
           ),
           Spacer(flex: 7),
           CustomShadow(
-            child: CustomButtons.CirculIconButton(
+            child: FoodHubCustomButtons.CirculIconButton(
               onTap: ButtonOnTap,
               icon: Icon(
                 Icons.arrow_forward,

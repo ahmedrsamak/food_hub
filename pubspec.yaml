@@ -37,6 +37,7 @@ dependencies:
   introduction_screen: ^3.0.2
   dots_indicator: ^2.1.0
   simple_shadow: ^0.3.0
+  string_validator: ^0.3.0
 
 dev_dependencies:
   flutter_test:

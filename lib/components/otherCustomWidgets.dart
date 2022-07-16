@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomWidgets {
+class FoodHubCustomWidgets {
   static Widget customDividerWithCenterText({
     Color? dividerColor,
     required String text,
