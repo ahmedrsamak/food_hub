@@ -31,6 +31,38 @@ class FoodHubCustomButtons {
           ),
         ),
       );
+  static Widget iconOnlyButton({
+    double width = 30,
+    double height = 20,
+    Color buttonColor = Colors.white,
+    required IconData icon,
+    Color? iconColor,
+    double? iconSize,
+    double borderRadius = 30,
+    required void Function()? onTap,
+  }) =>
+      Container(
+        decoration: BoxDecoration(
+          color: buttonColor,
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onTap,
+            child: Container(
+              alignment: Alignment.center,
+              width: width,
+              height: height,
+              child: Icon(
+                icon,
+                color: iconColor,
+                size: iconSize,
+              ),
+            ),
+          ),
+        ),
+      );
 
   static Widget textLogoButton({
     double width = 30,
