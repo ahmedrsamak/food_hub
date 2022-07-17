@@ -41,10 +41,9 @@ class LogInScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(26),
-        child: Column(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: ListView(
           children: [
-            Spacer(flex: 2),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -53,7 +52,7 @@ class LogInScreen extends StatelessWidget {
                     fontsize: 36, fontWeight: FontWeight.w600),
               ),
             ),
-            Spacer(flex: 2),
+            SizedBox(height: 31),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -62,7 +61,7 @@ class LogInScreen extends StatelessWidget {
                     color: FoodHubColors.subTextColor),
               ),
             ),
-            Spacer(flex: 1),
+            SizedBox(height: 12),
             FoodHubTextFormField.customTextFormField(
               textInputType: TextInputType.emailAddress,
               controller:
@@ -75,7 +74,7 @@ class LogInScreen extends StatelessWidget {
                 print("$value");
               }, //TODO add OnSubmit Action
             ),
-            Spacer(flex: 2),
+            SizedBox(height: 29),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -84,7 +83,7 @@ class LogInScreen extends StatelessWidget {
                     color: FoodHubColors.subTextColor),
               ),
             ),
-            Spacer(flex: 1),
+            SizedBox(height: 12),
             FoodHubTextFormField.customTextFormField(
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -104,41 +103,51 @@ class LogInScreen extends StatelessWidget {
                 print("$value");
               }, //TODO add OnSubmit Action
             ),
-            Spacer(flex: 2),
-            Text("Forgot password?",
-                style: FoodHubTextStyles.defualtTextStyle(
-                    color: FoodHubColors.primaryColor)),
-            Spacer(flex: 2),
-            CustomShadow(
-              color: FoodHubColors.primaryColor,
-              child: FoodHubCustomButtons.textOnlyButton(
-                height: 60,
-                width: 248,
-                buttonColor: FoodHubColors.primaryColor,
-                textStyle: FoodHubTextStyles.defualtTextStyle(
-                    fontsize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: FoodHubColors.white),
-                text: "SIGN UP",
-                onTap: () {}, // TODO add Button on TAP
-              ),
+            SizedBox(height: 32),
+            Align(
+              alignment: Alignment.center,
+              child: Text("Forgot password?",
+                  style: FoodHubTextStyles.defualtTextStyle(
+                      fontsize: 14, color: FoodHubColors.primaryColor)),
             ),
-            Spacer(flex: 2),
-            FoodHubCustomTexts.customTextWithUrl(
-              text1: "Don’t have an account? ",
-              text2: "Sign Up",
-              text1Style: FoodHubTextStyles.defualtTextStyle(
-                  color: FoodHubColors.urlMainTextColor),
-              text2Style: FoodHubTextStyles.defualtTextStyle(
+            SizedBox(height: 32),
+            Align(
+              alignment: Alignment.center,
+              child: CustomShadow(
                 color: FoodHubColors.primaryColor,
+                child: FoodHubCustomButtons.textOnlyButton(
+                  height: 60,
+                  width: 248,
+                  buttonColor: FoodHubColors.primaryColor,
+                  textStyle: FoodHubTextStyles.defualtTextStyle(
+                      fontsize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: FoodHubColors.white),
+                  text: "SIGN UP",
+                  onTap: () {}, // TODO add Button on TAP
+                ),
               ),
             ),
-            Spacer(flex: 3),
+            SizedBox(height: 32),
+            Align(
+              alignment: Alignment.center,
+              child: FoodHubCustomTexts.customTextWithUrl(
+                text1: "Don’t have an account? ",
+                text2: "Sign Up",
+                text1Style: FoodHubTextStyles.defualtTextStyle(
+                    color: FoodHubColors.urlMainTextColor, fontsize: 14),
+                text2Style: FoodHubTextStyles.defualtTextStyle(
+                  fontsize: 14,
+                  color: FoodHubColors.primaryColor,
+                ),
+              ),
+            ),
+            SizedBox(height: 56),
             FoodHubCustomWidgets.customDividerWithCenterText(
                 text: "Sign up with",
                 textStyle: FoodHubTextStyles.defualtTextStyle(
                     color: FoodHubColors.urlMainTextColor, fontsize: 14)),
-            Spacer(flex: 1),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -171,6 +180,7 @@ class LogInScreen extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 10),
           ],
         ),
       ),

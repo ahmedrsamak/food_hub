@@ -15,7 +15,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: Size.fromHeight(40),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -26,8 +26,8 @@ class SignUpScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(26),
-        child: Column(
+        padding: EdgeInsets.symmetric(horizontal: 26),
+        child: ListView(
           children: [
             Align(
               alignment: Alignment.centerLeft,
@@ -37,7 +37,7 @@ class SignUpScreen extends StatelessWidget {
                     fontsize: 36, fontWeight: FontWeight.w600),
               ),
             ),
-            Spacer(flex: 2),
+            SizedBox(height: 31),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -46,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
                     color: FoodHubColors.subTextColor),
               ),
             ),
-            Spacer(flex: 1),
+            SizedBox(height: 12),
             FoodHubTextFormField.customTextFormField(
               controller:
                   TextEditingController(), // TODO Add TextInputController variable and action
@@ -58,7 +58,7 @@ class SignUpScreen extends StatelessWidget {
                 print("$value");
               }, //TODO add OnSubmit Action
             ),
-            Spacer(flex: 2),
+            SizedBox(height: 29),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -67,7 +67,7 @@ class SignUpScreen extends StatelessWidget {
                     color: FoodHubColors.subTextColor),
               ),
             ),
-            Spacer(flex: 1),
+            SizedBox(height: 12),
             FoodHubTextFormField.customTextFormField(
               textInputType: TextInputType.emailAddress,
               controller:
@@ -80,7 +80,7 @@ class SignUpScreen extends StatelessWidget {
                 print("$value");
               }, //TODO add OnSubmit Action
             ),
-            Spacer(flex: 2),
+            SizedBox(height: 29),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -89,7 +89,7 @@ class SignUpScreen extends StatelessWidget {
                     color: FoodHubColors.subTextColor),
               ),
             ),
-            Spacer(flex: 1),
+            SizedBox(height: 12),
             FoodHubTextFormField.customTextFormField(
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -109,37 +109,43 @@ class SignUpScreen extends StatelessWidget {
                 print("$value");
               }, //TODO add OnSubmit Action
             ),
-            Spacer(flex: 2),
-            CustomShadow(
-              color: FoodHubColors.primaryColor,
-              child: FoodHubCustomButtons.textOnlyButton(
-                height: 60,
-                width: 248,
-                buttonColor: FoodHubColors.primaryColor,
-                textStyle: FoodHubTextStyles.defualtTextStyle(
-                    fontsize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: FoodHubColors.white),
-                text: "SIGN UP",
-                onTap: () {}, // TODO add Button on TAP
-              ),
-            ),
-            Spacer(flex: 2),
-            FoodHubCustomTexts.customTextWithUrl(
-              text1: "Already have an account? ",
-              text2: "Login",
-              text1Style: FoodHubTextStyles.defualtTextStyle(
-                  color: FoodHubColors.urlMainTextColor),
-              text2Style: FoodHubTextStyles.defualtTextStyle(
+            SizedBox(height: 33),
+            Align(
+              alignment: Alignment.center,
+              child: CustomShadow(
                 color: FoodHubColors.primaryColor,
+                child: FoodHubCustomButtons.textOnlyButton(
+                  height: 60,
+                  width: 248,
+                  buttonColor: FoodHubColors.primaryColor,
+                  textStyle: FoodHubTextStyles.defualtTextStyle(
+                      fontsize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: FoodHubColors.white),
+                  text: "SIGN UP",
+                  onTap: () {}, // TODO add Button on TAP
+                ),
               ),
             ),
-            Spacer(flex: 3),
+            SizedBox(height: 33),
+            Align(
+              alignment: Alignment.center,
+              child: FoodHubCustomTexts.customTextWithUrl(
+                text1: "Already have an account? ",
+                text2: "Login",
+                text1Style: FoodHubTextStyles.defualtTextStyle(
+                    color: FoodHubColors.urlMainTextColor),
+                text2Style: FoodHubTextStyles.defualtTextStyle(
+                  color: FoodHubColors.primaryColor,
+                ),
+              ),
+            ),
+            SizedBox(height: 54),
             FoodHubCustomWidgets.customDividerWithCenterText(
                 text: "Sign up with",
                 textStyle: FoodHubTextStyles.defualtTextStyle(
                     color: FoodHubColors.urlMainTextColor, fontsize: 14)),
-            Spacer(flex: 1),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -172,6 +178,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 10),
           ],
         ),
       ),

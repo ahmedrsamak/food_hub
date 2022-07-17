@@ -16,4 +16,5 @@ class FoodHubColors {
   static Color iconColor = Colors.white;
   static Color inactiveIconColor = Color(0xFFD0D2D1);
   static Color urlMainTextColor = Color(0xFF5B5B5E);
+  static Color lightGreyColor = Color(0xFF9796A1);
 }
