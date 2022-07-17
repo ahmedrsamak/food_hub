@@ -8,10 +8,13 @@ import '../../shared/styles/colors.dart';
 import '../../shared/styles/texts_styles.dart';
 
 class VerificationCodeScreen extends StatelessWidget {
-  const VerificationCodeScreen({Key? key}) : super(key: key);
+  const VerificationCodeScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String mail = "prelookstudio@gmail.com";
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(80),
@@ -51,7 +54,7 @@ class VerificationCodeScreen extends StatelessWidget {
             ),
             SizedBox(height: 12),
             Text(
-              "Please type the verification code sent to\nprelookstudio@gmail.com",
+              "Please type the verification code sent to\n$mail", // TODO replace mail with mail wrriten in past form
               style: FoodHubTextStyles.defualtTextStyle(
                   fontsize: 14, color: FoodHubColors.lightGreyColor),
             ),

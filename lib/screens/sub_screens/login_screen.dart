@@ -123,7 +123,7 @@ class LogInScreen extends StatelessWidget {
                       fontsize: 15,
                       fontWeight: FontWeight.w600,
                       color: FoodHubColors.white),
-                  text: "SIGN UP",
+                  text: "LOGIN",
                   onTap: () {}, // TODO add Button on TAP
                 ),
               ),
